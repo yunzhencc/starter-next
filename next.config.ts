@@ -1,7 +1,15 @@
 import type { NextConfig } from 'next';
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+export default async function nextConfig(phase: string): Promise<NextConfig> {
+  if (phase !== PHASE_DEVELOPMENT_SERVER)
+    return {};
 
-export default nextConfig;
+  const { codeInspectorPlugin } = await import('code-inspector-plugin');
+
+  return {
+    turbopack: {
+      rules: codeInspectorPlugin({ bundler: 'turbopack' }),
+    },
+  };
+}

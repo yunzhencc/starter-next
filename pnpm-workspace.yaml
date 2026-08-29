@@ -6,6 +6,7 @@ shellEmulator: true
 trustPolicy: no-downgrade
 
 allowBuilds:
+  node-pty: false
   simple-git-hooks: true
   unrs-resolver: true
 
