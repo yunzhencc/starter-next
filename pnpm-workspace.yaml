@@ -1,6 +1,16 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
 allowBuilds:
   unrs-resolver: true
-  
+
+trustPolicyExclude:
+  - semver@6.3.1
+  - fastq@1.20.2
+
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
+ignoredOptionalDependencies:
+  - '@eslint-react/eslint-plugin'
