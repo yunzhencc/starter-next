@@ -6,5 +6,9 @@ export default antfu({
     indent: 2,
     quotes: 'single',
   },
+  react: true,
   nextjs: true,
+  ignores: [
+    'components/ui/',
+  ],
 });

@@ -1,8 +1,12 @@
+minimumReleaseAgeExclude:
+  - lucide-react@1.35.0
+  - simple-git-hooks@2.14.0
 shellEmulator: true
 
 trustPolicy: no-downgrade
 
 allowBuilds:
+  simple-git-hooks: true
   unrs-resolver: true
 
 trustPolicyExclude:
