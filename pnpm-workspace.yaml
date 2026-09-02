@@ -1,6 +1,7 @@
 minimumReleaseAgeExclude:
   - lucide-react@1.35.0
   - simple-git-hooks@2.14.0
+  - '@types/node@26.4.1'
 shellEmulator: true
 
 trustPolicy: no-downgrade
